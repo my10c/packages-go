@@ -1,0 +1,4 @@
+github.com/my10c/packages-go/exit v0.0.0-20220530031542-8a2059d8a59f h1:SoRLZps+PySM6eBFIrTPsVjllHf6kCrX6QJhaYNUGMA=
+github.com/my10c/packages-go/exit v0.0.0-20220530031542-8a2059d8a59f/go.mod h1:j8DRPH87mbUW4JR20Rn6F9/2sRI6yMAOt5XamgDpg6M=
+github.com/my10c/packages-go/print v0.0.0-20220530031542-8a2059d8a59f h1:VAN3GK/IIhbclgU9NENylUjeJmg6a53DDC3yJ5UIHqU=
+github.com/my10c/packages-go/print v0.0.0-20220530031542-8a2059d8a59f/go.mod h1:p9OeNzj9jMQlDPwiVIBieuvlWQc4TtUUPWDRJFtDrV8=
