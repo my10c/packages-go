@@ -25,6 +25,7 @@ const (
 	off       = "\x1b[0m"
 	purple    = "\x1b[1;35m"
 	clearLine = "\x1b[0G\x1b[2K\x1b[0m\r"
+	clearCounter = "\x1b[0G\x1b[2K\r"
 )
 
 // the spinner class
@@ -71,10 +72,19 @@ func (w *Wheel) Stop() {
 }
 
 // counter
-func (w *Wheel) Counter(count int) {
-	cnt := count	
-	for cnt < count {
-		fmt.Printf("'\x1b[2K[%c]", cnt)
+func (w *Wheel) Counter(count int, msg string) {
+	cnt := count
+	// hide cursore
+	fmt.Fprintf(os.Stdout, "\x1b[?25l")
+	fmt.Printf(purple)
+	for cnt > 0 {
+		fmt.Printf("%s [%d]", msg, cnt)
 		time.Sleep(w.Speed * time.Millisecond)
+		fmt.Printf(clearCounter)
+		cnt--
 	}
+	// show cursor
+	fmt.Fprint(os.Stdout, off)
+	fmt.Fprint(os.Stdout, "\x1b[?25h")
+	fmt.Fprint(os.Stdout, clearLine)
 }

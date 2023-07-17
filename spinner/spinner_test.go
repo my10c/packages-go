@@ -23,5 +23,5 @@ func TestSpinne(t *testing.T) {
 	s.Stop()
 	fmt.Printf("\nstoped\n")
 
-	go s.Counter(20)
+	go s.Counter(20, "test")
 }
