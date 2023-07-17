@@ -72,7 +72,7 @@ func (w *Wheel) Stop() {
 
 // counter
 func (w *Wheel) Counter(count int) {
-	cnt = count	
+	cnt := count	
 	for cnt < count {
 		fmt.Printf("'\x1b[2K[%c]", cnt)
 		time.Sleep(w.Speed * time.Millisecond)
