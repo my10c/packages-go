@@ -22,4 +22,6 @@ func TestSpinne(t *testing.T) {
 	time.Sleep(10 * time.Second)
 	s.Stop()
 	fmt.Printf("\nstoped\n")
+
+	go s.Counter(20)
 }

@@ -69,3 +69,12 @@ func (w *Wheel) Stop() {
 	fmt.Fprint(os.Stdout, "\x1b[?25h")
 	fmt.Fprint(os.Stdout, clearLine)
 }
+
+// counter
+func (w *Wheel) Counter(count int) {
+	cnt = count	
+	for cnt < count {
+		fmt.Printf("'\x1b[2K[%c]", cnt)
+		time.Sleep(w.Speed * time.Millisecond)
+	}
+}
